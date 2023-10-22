@@ -16,7 +16,7 @@ const assertEqual = function(actual, expected) {
 
 /*head returns the first element in a given array. if the array is empty, it returns undefined
 :param arr: array to be worked with
-:type actual: array
+:type arr: array
 :return: values of first element of array, or undefined
 */
 const head = function(arr) {
