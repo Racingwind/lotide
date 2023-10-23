@@ -18,7 +18,7 @@ const eqArrays = function(arr1, arr2) {
   else {
     return false; //array length does not match, they cannot be equal
   }
-}
+};
 
 const assertArraysEqual = function(input1, input2) {
   /*Prints success if two inputs exactly match each other. Fail otherwise
@@ -50,7 +50,7 @@ const without = function(arr, values) {
   let i = 0;
   let arrLocal = Array.from(arr); //making a shallow copy so we don't change the original array being referenced by arr with splice
   while (i < arrLength) {
-    for (value of values) {
+    for (let value of values) {
       if (arrLocal[i] === value) {
         arrLocal.splice(i, 1); //remove the element from array and compact it
         i -= 1; //decrement index counter as array length has shrunk by 1
@@ -62,17 +62,17 @@ const without = function(arr, values) {
   }
 
   return arrLocal;
-}
+};
 
-console.log(without([1, 2, 3], [1])) // => [2, 3]
-console.log(without(["1", "2", "3"], [1, 2, "3"])) // => ["1", "2"]
-console.log(without(["4", "5", "6"])) // => ["4", "5", "6"]
-console.log(without(["7", "8", "9"], ["7", "9"])) // => ["8"]
-console.log(without([true, undefined, false], [undefined])) // => [true, false]
-console.log(without(null, ["7", "9"])) // => null
-console.log(without(["7", "8", "9"], ["7", "8", "9"])) // => []
-console.log(without([0], [0])) // => []
-console.log(without(["7", 0, "9"], [0])) // => ["7", "9"]
+console.log(without([1, 2, 3], [1])); // => [2, 3]
+console.log(without(["1", "2", "3"], [1, 2, "3"])); // => ["1", "2"]
+console.log(without(["4", "5", "6"])); // => ["4", "5", "6"]
+console.log(without(["7", "8", "9"], ["7", "9"])); // => ["8"]
+console.log(without([true, undefined, false], [undefined])); // => [true, false]
+console.log(without(null, ["7", "9"])); // => null
+console.log(without(["7", "8", "9"], ["7", "8", "9"])); // => []
+console.log(without([0], [0])); // => []
+console.log(without(["7", 0, "9"], [0])); // => ["7", "9"]
 
 
 const words = ["hello", "world", "lighthouse"];
