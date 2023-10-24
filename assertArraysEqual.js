@@ -18,7 +18,7 @@ const eqArrays = function(arr1, arr2) {
   else {
     return false; //array length does not match, they cannot be equal
   }
-}
+};
 
 const assertArraysEqual = function(input1, input2) {
   /*Prints success if two inputs exactly match each other. Fail otherwise

@@ -79,11 +79,3 @@ const words = ["hello", "world", "lighthouse"];
 console.log(without(words, ["lighthouse"])); // no need to capture return value for this test case
 // Make sure the original array was not altered by the without function
 assertArraysEqual(words, ["hello", "world", "lighthouse"]);
-
-
-// let test = ['1', '2', '3'];
-// test2 = test.splice(1, 1); <------ this is weird!!
-// test3 = test
-// console.log(test)
-// console.log(test2);
-// console.log(test3)
