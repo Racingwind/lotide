@@ -1,3 +1,4 @@
+const assertEqual = function(actual, expected) {
 /* FUNCTION IMPLEMENTATION
 Prints success if two inputs exactly match each other. Fail otherwise
 
@@ -7,8 +8,6 @@ Prints success if two inputs exactly match each other. Fail otherwise
 :type expected: simple data types
 :return: does not return anything
 */
-
-const assertEqual = function(actual, expected) {
   if (actual === expected) {
     console.log(`✅ Assertion Passed : ${actual} ===  ${expected}`);
   } else {
