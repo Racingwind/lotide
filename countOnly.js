@@ -26,7 +26,6 @@ return: an object with the final count
 const results = {};
 
 for (const item of allItems) {
-  console.log(item);
   if (itemsToCount[item]) {
     if (results[item]) { //need to manually assign a number if the key doesn't exist. as you cannot simply "+= 1" to something that's undefined
       results[item] += 1;
@@ -37,9 +36,6 @@ for (const item of allItems) {
 }
 return results;
 }
-
-
-
 
 
 const firstNames = [
