@@ -33,7 +33,7 @@ const eqArrays = function(arr1, arr2) {
   else {
     return false; //array length does not match, they cannot be equal
   }
-}
+};
 
 
 // TEST CODE
