@@ -36,12 +36,6 @@ const assertArraysEqual = function(input1, input2) {
 };
 
 // TEST CODE
-console.log([1, 2, 3], [1, 2, 3]);
-assertArraysEqual([1, 2, 3], [1, 2, 3]); // => true
-console.log([1, 2, 3], [3, 2, 1]);
-assertArraysEqual([1, 2, 3], [3, 2, 1]); // => false
-
-console.log(["1", "2", "3"], ["1", "2", "3"]);
-assertArraysEqual(["1", "2", "3"], ["1", "2", "3"]); // => true
-console.log(["1", "2", "3"], ["1", "2", 3]);
-assertArraysEqual(["1", "2", "3"], ["1", "2", 3]); // => false
+const multiColorShirtObject = { colors: ["red", "blue"], size: "medium" };
+const anotherMultiColorShirtObject = { size: "medium", colors: ["red", "blue"] };
+assertArraysEqual(multiColorShirtObject, anotherMultiColorShirtObject);
