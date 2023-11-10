@@ -1,5 +1,3 @@
-const assertEqual = require('./assertEqual');
-
 /*head returns the first element in a given array. if the array is empty, it returns undefined
 :param arr: array to be worked with
 :type arr: array
