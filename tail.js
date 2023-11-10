@@ -1,17 +1,4 @@
-/*assertEqual prints success if two inputs exactly match each other. Fail otherwise
-:param actual: thing to be compared
-:param expected: thing to be compared to
-:type actual: simple data types
-:type expected: simple data types
-:return: does not return anything
-*/
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`✅ Assertion Passed : ${actual} ===  ${expected}`);
-  } else {
-    console.log(`❌ Assertion Failed : ${actual} !== ${expected}`);
-  }
-};
+const assertEqual = require('./assertEqual');
 
 
 /*tail returns the a given array without the first element. if the array has a length of 1 or it's empty, it returns an empty array
