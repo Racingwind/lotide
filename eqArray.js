@@ -1,18 +1,3 @@
-const assertEqual = function(actual, expected) {
-  /*Prints success if two inputs exactly match each other. Fail otherwise
-  :param actual: thing to be compared
-  :param expected: thing to be compared to
-  :type actual: simple data types
-  :type expected: simple data types
-  :return: does not return anything
-  */
-  if (actual === expected) {
-    console.log(`✅ Assertion Passed : ${actual} ===  ${expected}`);
-  } else {
-    console.log(`❌ Assertion Failed : ${actual} !== ${expected}`);
-  }
-};
-
 const eqArrays = function(arr1, arr2) {
   /*Returns true if both input arrays match each other by element. false otherwise
   :param arr1: array 1
@@ -35,10 +20,4 @@ const eqArrays = function(arr1, arr2) {
   }
 };
 
-
-// TEST CODE
-assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true) // => true
-assertEqual(eqArrays([1, 2, 3], [3, 2, 1]), true) // => false
-
-assertEqual(eqArrays(["1", "2", "3"], ["1", "2", "3"]), true) // => true
-assertEqual(eqArrays(["1", "2", "3"], ["1", "2", 3]), true) // => false
+module.exports = eqArrays;
