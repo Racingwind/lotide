@@ -1,18 +1,4 @@
-/*assertEqual prints success if two inputs exactly match each other. Fail otherwise
-:param actual: thing to be compared
-:param expected: thing to be compared to
-:type actual: simple data types
-:type expected: simple data types
-:return: does not return anything
-*/
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`✅ Assertion Passed : ${actual} ===  ${expected}`);
-  } else {
-    console.log(`❌ Assertion Failed : ${actual} !== ${expected}`);
-  }
-};
-
+const assertEqual = require('./assertEqual');
 
 /*head returns the first element in a given array. if the array is empty, it returns undefined
 :param arr: array to be worked with
