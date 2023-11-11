@@ -1,5 +1,3 @@
-const assertEqual = require('./assertEqual');
-
 const findKeyByValue = function(inputList, showName) {
   /*finds the key (genre) of the given input value (show name)
   :param inputList: object with keys as genre and only 1 value for each key as show

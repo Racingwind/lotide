@@ -10,7 +10,7 @@ describe("#eqObjects", () => {
     assert.strictEqual(eqObjects({ color: "red", size: "medium" }, { size: "medium", color: "red", sleeveLength: "long" }), false);
   });
 
-  it("returns false for { colors: ['red', 'blue'], size: 'medium' } and { size: 'medium', colors: ['red', 'blue'] }", () => {
+  it("returns true for { colors: ['red', 'blue'], size: 'medium' } and { size: 'medium', colors: ['red', 'blue'] }", () => {
     assert.strictEqual(eqObjects({ colors: ["red", "blue"], size: "medium" }, { size: "medium", colors: ["red", "blue"] }), true);
   });
 
