@@ -1,5 +1,3 @@
-const assertEqual = require('./assertEqual');
-
 const findKey = function(itemsObj, callback) {
   /*This function will iterate through each object key and pass the key to the callback function and return the key if the callback function returns true
   param: object: the object to be inspected
