@@ -1,17 +1,4 @@
-const assertEqual = function(actual, expected) {
-  /*Prints success if two inputs exactly match each other. Fail otherwise
-  :param actual: thing to be compared
-  :param expected: thing to be compared to
-  :type actual: simple data types
-  :type expected: simple data types
-  :return: does not return anything
-  */
-  if (actual === expected) {
-    console.log(`✅ Assertion Passed : ${actual} ===  ${expected}`);
-  } else {
-    console.log(`❌ Assertion Failed : ${actual} !== ${expected}`);
-  }
-};
+const assertEqual = require('assertEqual');
 
 const findKey = function(itemsObj, callback) {
   /*This function will iterate through each object key and pass the key to the callback function and return the key if the callback function returns true
@@ -29,6 +16,7 @@ const findKey = function(itemsObj, callback) {
   return undefined;
 };
 
+module.export = findKey;
 
 
 const test1 = findKey({
