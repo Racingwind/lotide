@@ -1,19 +1,4 @@
-const assertEqual = function(actual, expected) {
-/* FUNCTION IMPLEMENTATION
-Prints success if two inputs exactly match each other. Fail otherwise
-
-:param actual: thing to be compared
-:param expected: thing to be compared to
-:type actual: simple data types
-:type expected: simple data types
-:return: does not return anything
-*/
-  if (actual === expected) {
-    console.log(`✅ Assertion Passed : ${actual} ===  ${expected}`);
-  } else {
-    console.log(`❌ Assertion Failed : ${actual} !== ${expected}`);
-  }
-};
+const assertEqual = require('./assertEqual');
 
 const findKeyByValue = function(inputList, showName) {
   /*finds the key (genre) of the given input value (show name)
@@ -31,6 +16,7 @@ const findKeyByValue = function(inputList, showName) {
   return undefined;
 };
 
+module.exports = findKeyByValue;
 
 const bestTVShowsByGenre = {
   sci_fi: "The Expanse",
