@@ -1,5 +1,3 @@
-const eqArrays = require('./eqArray');
-
 const middle = function(inputArr) {
   if (inputArr.length < 3) {
     return [];
