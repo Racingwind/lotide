@@ -1,20 +1,5 @@
-const assertEqual = function(actual, expected) {
-/* FUNCTION IMPLEMENTATION
-Prints success if two inputs exactly match each other. Fail otherwise
+const assertEqual = require('./assertEqual');
 
-:param actual: thing to be compared
-:param expected: thing to be compared to
-:type actual: simple data types
-:type expected: simple data types
-:return: does not return anything
-*/
-  if (actual === expected) {
-    console.log(`✅ Assertion Passed : ${actual} ===  ${expected}`);
-  } else {
-    console.log(`❌ Assertion Failed : ${actual} !== ${expected}`);
-  }
-};
-  
 const countLetters = function(inputString) {
   /*given an input strings. It will return an object containing counts of each unique letters
   param: inputString: an array of strings that we need to look through
@@ -34,6 +19,7 @@ const countLetters = function(inputString) {
   return results;
 };
 
+module.export = countLetters;
 
 const result = countLetters("lighthouse in the house");
 
