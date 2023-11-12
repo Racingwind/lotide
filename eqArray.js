@@ -9,6 +9,12 @@ const eqArrays = function(arr1, arr2) {
   let arrLength = arr1.length;
   if (arrLength === arr2.length) {
     for (let i = 0; i < arrLength; i++) {
+      if (Array.isArray(arr1[i])) { // if element is an array
+        if(!(eqArrays(arr1[i], arr2[i]))) {
+          return false;
+        }
+        continue; // the two arrays match, skip the rest of the checks
+      }
       if (arr1[i] !== arr2[i]) { //if we find an element to not match, immediately return with false
         return false;
       }
