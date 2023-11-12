@@ -16,20 +16,19 @@ const eqObjects = function(object1, object2) {
     return false;
   }
   for (const key of arrKeys1) {
-    console.log("check key")
     value1 = object1[key];
     value2 = object2[key];
     if ((Object.prototype.toString.call(object1[key]) === "[object Object]") && (Object.prototype.toString.call(object2[key]) === "[object Object]")) { // values are objects
       if (!eqObjects(object1[key], object2[key])) {
         return false;
       }
-      break; // the two values match, skip the rest of the check
+      continue; // the two values match, skip the rest of the check
     }
     if (Array.isArray(object1[key]) && Array.isArray(object2[key])) { // values are arrays
       if (!eqArrays(value1, value2)) {
         return false;
       }
-      break; // the two values match, skip the rest of the check
+      continue; // the two values match, skip the rest of the check
     }
     if (value1 !== value2) { // values are primitives
       return false;

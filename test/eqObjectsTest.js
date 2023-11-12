@@ -51,4 +51,12 @@ describe("#eqObjects", () => {
     assert.strictEqual(eqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: 1, b: 2 }), false);
   });
 
+  it("returns true for { a: { v: 2, x: 3, y: 0, z: 1 }, b: 2, c: 7, d: {e: 6, f: {g: 8, h: 2}, i: 7} } and { a: { v: 2, x: 3, y: 0, z: 1 }, b: 2, c: 7, d: {e: 6, f: {g: 8, h: 2}, i: 7} }", () => {
+    assert.strictEqual(eqObjects({ a: { v: 2, x: 3, y: 0, z: 1 }, b: 2, c: 7, d: {e: 6, f: {g: 8, h: 2}, i: 7} }, { a: { v: 2, x: 3, y: 0, z: 1 }, b: 2, c: 7, d: {e: 6, f: {g: 8, h: 2}, i: 7} }), true);
+  });
+
+  it("returns true for { a: { v: 2, x: 3, y: 0, z: 1 }, b: 2, c: 7, d: {e: 6, f: {g: 8, h: 2}, i: 7} } and { a: { v: 2, x: 3, y: 0, z: 1 }, b: 2, c: 7, d: {e: 6, f: {g: 8, h: 2}, i: 7} }", () => {
+    assert.strictEqual(eqObjects({ a: { v: 2, x: 3, y: 0, z: 1 }, b: 2, c: 7, d: {e: 6, f: {g: 6, h: 2}, i: 7} }, { a: { v: 2, x: 3, y: 0, z: 1 }, b: 2, c: 7, d: {e: 6, f: {g: 8, h: 2}, i: 7} }), false);
+  });
+
 });
